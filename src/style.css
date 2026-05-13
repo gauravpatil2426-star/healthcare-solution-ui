@@ -1627,25 +1627,17 @@
 
     .newsletter {
         flex-direction: column;
-        width: 100%;
     }
 
-     .newsletter input {
-        width: 100%;
-        height: 55px;
-        padding: 0 15px;
+    .newsletter input {
         border-radius: 6px;
-        margin-bottom: 12px;
-        font-size: 16px;
-        box-sizing: border-box;
+        margin-bottom: 10px;
+        width: 60%;
     }
-
 
     .newsletter button {
         border-radius: 6px;
         width: 100%;
-        height: 55%;
-        font-size: 16px
     }
 
 
