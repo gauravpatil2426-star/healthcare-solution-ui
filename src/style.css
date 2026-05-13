@@ -76,6 +76,7 @@
     position: sticky;
     top: 0;
     z-index: 9999;
+    width: 100%;
 }
 
 /* Flex */
@@ -83,6 +84,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 /* Logo */
@@ -108,6 +110,7 @@
 .menu {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .menu a {
@@ -118,6 +121,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 24px;
+    transition: 0.3s;
 }
 
 .menu a:hover {
@@ -141,7 +145,7 @@
     top: 100%;
     left: 0;
     background: #fff;
-    min-width: 120px;
+    min-width: 150px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: none;
     padding: 10px 0;
@@ -150,7 +154,7 @@
 }
 
 .dropdown-menu a {
-    padding: 8px 15px;
+    padding: 10px 15px;
     color: #1a1a3c;
     font-size: 14px;
     display: block;
@@ -164,6 +168,103 @@
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 992px) {
+
+    .logo-text {
+        font-size: 28px;
+    }
+
+    .menu {
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 10px 0;
+    }
+
+    .flex-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Logo */
+    .logo {
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .logo-text {
+        font-size: 26px;
+    }
+
+    /* Menu */
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    /* Dropdown */
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: block;
+        box-shadow: none;
+        background: #f8f9fa;
+        margin-top: 8px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo img {
+        height: 48px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
 }
 
 /* ==============================
