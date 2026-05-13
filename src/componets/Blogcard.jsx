@@ -7,7 +7,7 @@ function BlogCard(props) {
       <img src={props.image} alt="" />
 
       <div className="blog-content">
-        <a href="#">{props.title}</a>
+        <a href="/blog-details">{props.title}</a>
         <p>{props.description}</p>
       </div>
 

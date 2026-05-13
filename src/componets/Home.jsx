@@ -6,7 +6,6 @@ import Find from './Find'
 import Blog from './Blog'
 import Bloggrid from './Bloggrid'
 
-
 const Home = () => {
     return (
         <div>
@@ -16,11 +15,10 @@ const Home = () => {
             <Service />
             <Find />
             <Blog />
-            
-           
-           
+            <Bloggrid />
 
         </div>
     )
 }
+
 export default Home;

@@ -1,9 +1,6 @@
 import React from "react";
-
 import aboutImg from "../img/about (1).jpg";
-import doctorImg from "../img/999.png";
 import serviceImg from "../img/2.png";
-// import testImg from "../img/999-removebg-preview.png";
 import adf from "../img/124.png"
 import ambulanceImg from "../img/4.png";
 
