@@ -1353,9 +1353,9 @@
    Small Mobile (480px se niche)
 =================================*/
 @media (max-width: 480px) {
-    .main-title {
+    .main-title-1 {
         width: 100%;
-        font-size: 28px;
+        font-size: 20px;
         line-height: 38px;
         text-align: center;
         margin-bottom: 30px;
