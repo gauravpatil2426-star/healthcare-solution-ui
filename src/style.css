@@ -1,46 +1,56 @@
 /* ==============================
-   Top Header
+   TOP HEADER
 ============================== */
 
 .top-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
     color: #9a9a9a;
     font-size: 16px;
-    /* 👈 thoda bada */
-    border-bottom: 1px solid #e5e5e5;
-    background: #ffffff;
 }
 
-/* Container */
+/* ==============================
+   CONTAINER
+============================== */
+
 .container {
     width: 90%;
     margin: auto;
     padding: 12px 20px;
 }
 
-/* Flex Layout */
+/* ==============================
+   FLEX LAYOUT
+============================== */
+
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-/* Left Section */
+/* ==============================
+   LEFT SECTION
+============================== */
+
 .left {
     display: flex;
-    gap: 15px;
     align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* Phone & Email Text */
+/* Phone & Email */
 .num {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    /* 👈 bigger text */
-    line-height: 24px;
-    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
 }
 
 /* Divider */
@@ -49,11 +59,14 @@
     font-size: 18px;
 }
 
+/* ==============================
+   RIGHT SECTION
+============================== */
 
 .right {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    gap: 15px;
 }
 
 .right svg {
@@ -63,39 +76,137 @@
     transition: 0.3s ease;
 }
 
+.right svg:hover {
+    color: #0dcaf0;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    .flex {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .left {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .num {
+        font-size: 15px;
+    }
+
+    .right {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .right svg {
+        font-size: 17px;
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 576px) {
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .num {
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .right {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .right svg {
+        font-size: 16px;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 350px) {
+
+    .num {
+        font-size: 13px;
+    }
+
+    .right svg {
+        font-size: 15px;
+    }
+}
 /* Hover Effect */
 
 
 
 /* ==============================
-   Main Header
+/* ==============================
+   MAIN HEADER
 ============================== */
 .main-header {
+    width: 100%;
     background: #fff;
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
     z-index: 9999;
-    width: 100%;
 }
 
-/* Flex */
+/* ==============================
+   FLEX
+============================== */
 .flex-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 12px 0;
     position: relative;
 }
 
-/* Logo */
+/* ==============================
+   LOGO
+============================== */
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo img {
     height: 65px;
+    width: auto;
 }
 
 .logo-text {
@@ -103,19 +214,24 @@
     font-weight: 800;
     color: #0dcaf0;
     letter-spacing: 2px;
+    line-height: 1;
 }
 
-/* Menu */
+/* ==============================
+   MENU
+============================== */
 .menu {
     display: flex;
-    gap: 25px;
     align-items: center;
+    gap: 25px;
 }
 
 .menu a {
     text-decoration: none;
     color: #1a1a3c;
+    font-size: 16px;
     font-weight: 500;
+    font-family: 'Roboto', sans-serif;
     transition: 0.3s;
 }
 
@@ -123,7 +239,9 @@
     color: #0dcaf0;
 }
 
-/* Dropdown */
+/* ==============================
+   DROPDOWN
+============================== */
 .dropdown {
     position: relative;
 }
@@ -132,53 +250,103 @@
     position: absolute;
     top: 100%;
     left: 0;
+    min-width: 180px;
     background: #fff;
-    min-width: 150px;
+    border-radius: 6px;
+    padding: 10px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: none;
-    padding: 10px 0;
-    border-radius: 6px;
+    z-index: 999;
 }
 
 .dropdown-menu a {
     display: block;
     padding: 10px 15px;
+    font-size: 15px;
 }
 
+.dropdown-menu a:hover {
+    background: #0dcaf0;
+    color: white;
+}
+
+/* Desktop Hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Mobile Button */
+/* ==============================
+   MOBILE MENU BUTTON
+============================== */
 .menu-btn {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
-    color: #1a1a3c;
+    /* color: #1a1a3c; */
+    color: #0dcaf0;
 }
 
-/* ======================
-   Responsive
-====================== */
+/* ==============================
+   TABLET
+============================== */
+@media (max-width: 992px) {
 
-@media (max-width: 768px) {
-
-    .menu-btn {
-        display: block;
+    .logo-text {
+        font-size: 28px;
     }
 
+    .menu {
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+@media (max-width: 768px) {
+
+    /* Flex */
+    .flex-2 {
+        padding: 15px 0;
+    }
+
+    /* Logo */
+    .logo img {
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    /* Mobile Button */
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10000;
+    }
+
+    /* Menu */
     .menu {
         position: absolute;
         top: 100%;
         right: 0;
+        width: 260px;
         background: white;
-        width: 250px;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
         gap: 18px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
         display: none;
     }
 
@@ -186,21 +354,64 @@
         display: flex;
     }
 
-    .dropdown-menu {
-        position: static;
-        display: block;
-        box-shadow: none;
-        padding-left: 10px;
+    .menu a {
+        width: 100%;
+        font-size: 16px;
     }
 
+    /* Dropdown */
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown>a {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background: #f8f9fa;
+        box-shadow: none;
+        margin-top: 10px;
+        padding: 5px 0;
+    }
+
+    /* Click / Tap Dropdown */
+    .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+@media (max-width: 480px) {
+
     .logo img {
-        height: 50px;
+        height: 45px;
     }
 
     .logo-text {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .menu {
+        width: 220px;
+    }
+
+    .menu a {
+        font-size: 14px;
     }
 }
+
 /* ==============================
    Hero Section
 ============================== */
@@ -692,13 +903,17 @@
     }
 }
 
-
+/* ==============================
+   SECTION BACKGROUND
+============================== */
 .bg-size {
     width: 100%;
     background-color: #13C5DD;
 }
 
-/* ===== TOP SMALL HEADING ===== */
+/* ==============================
+   TOP HEADING
+============================== */
 .service-text-1 {
     text-align: center;
     font-size: 16px;
@@ -710,7 +925,9 @@
     margin-bottom: 5px;
 }
 
-/* ===== UNDERLINE ===== */
+/* ==============================
+   UNDERLINE
+============================== */
 .underline-3 {
     width: 120px;
     height: 4px;
@@ -719,20 +936,26 @@
     border-radius: 10px;
 }
 
-/* ===== MAIN SECTION ===== */
+/* ==============================
+   MAIN SECTION
+============================== */
 .healthcare-section {
     width: 100%;
-    padding: 60px 0 100px 0;
+    padding: 60px 0 100px;
     text-align: center;
 }
 
-/* ===== CONTAINER ===== */
+/* ==============================
+   CONTAINER
+============================== */
 .healthcare-container {
-    width: 60%;
+    width: 65%;
     margin: auto;
 }
 
-/* ===== TITLE ===== */
+/* ==============================
+   TITLE
+============================== */
 .healthcare-title {
     font-family: "Roboto", sans-serif;
     font-size: 65px;
@@ -742,80 +965,86 @@
     margin-bottom: 20px;
 }
 
-/* ===== PARAGRAPH ===== */
+/* ==============================
+   TEXT
+============================== */
 .healthcare-text {
     font-size: 20px;
     color: white;
     line-height: 30px;
     max-width: 750px;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 35px;
 }
 
-/* ===== SEARCH BOX ===== */
+/* ==============================
+   SEARCH BOX
+============================== */
 .search-box {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    align-items: center;
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== INPUTS ===== */
+/* ==============================
+   INPUTS
+============================== */
 .search-dept,
 .search-input {
-    padding: 18px;
     border: none;
     outline: none;
-    font-size: 18px;
-    background: white;
+    padding: 18px 20px;
+    font-size: 17px;
     color: #848E9F;
+    background: white;
 }
 
-/* ===== WIDTH CONTROL ===== */
+/* Department */
 .search-dept {
-    width: 22%;
+    width: 25%;
     border-right: 1px solid #eee;
 }
 
+/* Input */
 .search-input {
-    width: 40%;
+    width: 45%;
 }
 
-/* ===== BUTTON ===== */
+/* ==============================
+   BUTTON
+============================== */
 .search-btn {
-    width: 40%;
+    width: 30%;
+    height: 100%;
     border: none;
     background: #1f2a56;
     color: white;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 18px 10px;
 }
 
 .search-btn:hover {
     background: #162042;
 }
 
-/* ============================= */
-/* ===== TABLET RESPONSIVE ===== */
-/* ============================= */
-
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
 @media (max-width: 992px) {
 
     .healthcare-container {
-        width: 80%;
+        width: 85%;
     }
 
     .healthcare-title {
-        font-size: 45px;
-        line-height: 55px;
+        font-size: 48px;
+        line-height: 58px;
     }
 
     .healthcare-text {
@@ -825,6 +1054,7 @@
 
     .search-box {
         flex-direction: column;
+        border-radius: 10px;
     }
 
     .search-dept,
@@ -837,22 +1067,20 @@
 
     .search-btn {
         border-bottom: none;
-        padding: 18px;
     }
 }
 
-/* ============================= */
-/* ===== MOBILE RESPONSIVE ===== */
-/* ============================= */
-
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
 @media (max-width: 576px) {
-
-    .service-text-1 {
-        font-size: 15px;
-    }
 
     .healthcare-container {
         width: 92%;
+    }
+
+    .service-text-1 {
+        font-size: 14px;
     }
 
     .healthcare-title {
@@ -863,17 +1091,18 @@
     .healthcare-text {
         font-size: 16px;
         line-height: 26px;
+        margin-bottom: 25px;
     }
 
     .search-dept,
     .search-input {
         padding: 15px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .search-btn {
         padding: 15px;
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
@@ -1123,8 +1352,8 @@
    Small Mobile (480px se niche)
 =================================*/
 @media (max-width: 480px) {
-    .main-title {
-        font-size: 20px;
+    .main-title-1 {
+        font-size: 40px;
     }
 
     .blog-content h3 {
@@ -1396,7 +1625,7 @@
     .newsletter input {
         border-radius: 6px;
         margin-bottom: 10px;
-        width: 100%;
+        width: 60%;
     }
 
     .newsletter button {
